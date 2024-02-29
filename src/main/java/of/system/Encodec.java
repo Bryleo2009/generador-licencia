@@ -5,11 +5,10 @@ import io.jsonwebtoken.SignatureAlgorithm;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Main {
+public class Encodec {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Por favor, introduce la versión del producto:");

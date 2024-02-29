@@ -4,13 +4,10 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 
-import javax.crypto.spec.SecretKeySpec;
-import java.security.Key;
-import java.util.Base64;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Main {
+public class Decodec {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -29,8 +26,8 @@ public class Main {
             Date fechaCompra = new Date(((Integer)claims.get("iat")).longValue() * 1000);
             Date fechaExpiracion = new Date(((Integer)claims.get("exp")).longValue() * 1000);
 
-            System.out.println("passKey: " + passKey);
-            System.out.println("fechaCompra: " + fechaCompra);
+            System.out.println("version: " + passKey);
+            System.out.println("fechaActivación: " + fechaCompra);
             System.out.println("fechaExpiracion: " + fechaExpiracion);
         } else {
             System.out.println("El token no es válido.");
